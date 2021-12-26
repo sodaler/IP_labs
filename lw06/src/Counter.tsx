@@ -17,7 +17,7 @@ var Counter = (props: CounterProps) => {
       <div>Вы набрали: {count}.</div>
       <Button
         onClick={handleIncrease}
-        text={(props.step >= 0 ? "Прибавим " : "Вычтем ") + props.step}
+        text={(props.step >= 0 ? "Прибавим " + props.step : "Вычтем " + Math.abs(props.step))}
       ></Button>
     </div>
   );
